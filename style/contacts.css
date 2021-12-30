@@ -1,0 +1,317 @@
+/*my css variables*/
+:root {
+    --mainColor: #F2B705;
+    --mainColor2: #09A603;
+    --subColor: #F2CB05;
+    --subColor2: #4703A6;
+    --subColor3: #D504D9;
+    --linksFont: 'Amatic SC', cursive;
+    --hFont: 'Henny Penny', cursive;
+    --mainFont: 'Roboto Mono', monospace;
+}
+
+.container-fluid {
+    background-color: var(--subColor2);
+    width: 100vw;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+    font-family: var(--hFont);
+    background-color: var(--subColor2);
+    color: var(--mainColor);
+    padding: 20px;
+
+}
+
+h1:hover {
+    color: var(--subColor3);
+}
+
+p {
+    font-family: var(--mainFont);
+    color: var(--subColor2);
+    text-align: left;
+    font-size: 1em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-family: var(--hFont);
+    color: var(--mainColor);
+}
+
+section.col>h2 {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: var(--mainFont);
+    color: var(--mainColor);
+    margin-bottom: 30px;
+}
+
+section.col>h3 {
+    text-align: center;
+    font-size: 1.2em;
+    font-family: var(--mainFont);
+    color: var(--mainColor);
+    margin-bottom: 30px;
+}
+
+section.col>h4 {
+    text-align: center;
+    font-size: 1.6em;
+    font-family: var(--mainFont);
+    color: var(--mainColor);
+    margin-bottom: 30px;
+}
+
+div#hamitems>img.logo1 {
+
+    left: 0px;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+div#hamitems>img.logo2 {
+
+    right: 0px;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+}
+
+section.col>form {
+    width: 95%;
+    top: 100px;
+    right: 30px;
+}
+
+
+
+section.col>form>ul {
+    list-style-type: none;
+    width: 90%;
+
+}
+
+h5 {
+    color: var(--mainColor);
+    text-align: center;
+}
+
+section.col>form {
+    width: 95%;
+    top: 100px;
+    right: 30px;
+}
+
+
+
+section.col>form>ul {
+    list-style-type: none;
+    width: 90%;
+
+}
+
+
+section.col>form>ul>li {
+
+    color: var(--mainColor);
+    padding: 10px;
+    font-family: var(--mainFont);
+    font-size: 0.8em;
+}
+
+section.col>form>ul>li>input {
+    width: 20vw;
+    margin-left: 10px;
+}
+
+section.col>form>ul>li>label {
+    background-color: var(--subColor3);
+    padding: 3px;
+    border: 3px wheat dotted;
+    width: 20vw;
+    margin-top: 10px;
+
+}
+
+section.col>form>ul>li>textarea {
+    width: 50vw;
+}
+
+
+#theClick {
+    margin-left: 10px;
+}
+
+#Reset {
+    margin-left: 10px;
+}
+
+#selectcity {
+    margin-left: 10px;
+    width: 20vw;
+}
+
+footer {
+    background: var(--subColor);
+    font-family: 'Suez One', serif;
+    font-size: 1.5em;
+    text-align: center;
+    height: 35vh;
+    width: 100vw;
+    padding: 20px;
+
+}
+
+footer>p {
+    font-family: var(--mainFont);
+    color: var(--subColor2);
+    text-align: center;
+    font-size: 1em;
+}
+
+footer>h2 {
+    font-family: var(--hFont);
+    color: var(--subColor2);
+    text-align: center;
+    font-size: 1em;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 1.5em;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.d-block {
+    height: 70vh;
+    width: 70vw;
+}
+
+
+#hamnav {
+
+    background: var(--mainColor);
+
+    position: sticky;
+    top: 0;
+}
+
+
+#hamitems {
+    display: flex;
+}
+
+#hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: var(--subColor2);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--linksFont);
+    font-size: 2.5rem;
+
+}
+
+#hamitems a:hover {
+    background: var(--mainColor2);
+}
+
+/* hide hamburger */
+#hamnav label,
+#hamburger {
+    display: none;
+}
+
+/* on small screens */
+@media screen and (max-width: 576px) {
+
+
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 80vh;
+        border-top: 1px solid #333;
+    }
+
+
+    #hamnav label {
+        display: inline-block;
+        color: white;
+        background: #a02620;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+
+    #hamitems {
+        display: none;
+    }
+
+    #hamnav input:checked~#hamitems {
+        display: block;
+    }
+
+    div#hamitems>img.logo1 {
+
+        display: none;
+    }
+
+    div#hamitems>img.logo2 {
+
+        display: none;
+    }
+
+    #main_title {
+
+        font-size: 1.5em;
+
+
+    }
+
+    #main_title>h1:hover {
+
+
+        font-size: 1.3em;
+    }
+
+    #hamitems a {
+
+        font-size: 1.3rem;
+
+    }
+
+    footer {
+
+        font-size: 1.2em;
+
+
+    }
+
+}
+
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+}
+
+.mapouter {
+    margin-top: 50px;
+    margin-left: 100px;
+    height: 250px;
+    width: 250px;
+}

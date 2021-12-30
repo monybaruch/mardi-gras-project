@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACTS PAGE</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Henny+Penny&family=Roboto+Mono:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link rel="stylesheet" href="style/contacts.css">
+</head>
+<body>
+  <div class="container-fluid p-0 m-0">
+    <header>
+      <nav id="hamnav">
+        <label for="hamburger">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <div id="hamitems">
+          <img class="logo1" src="pictures/logo1.png" alt="">
+          <a href="main-homepage.html">Home Page</a>
+          <a href="about.html">About</a>
+          <a href="media.html">Media</a>
+          <a href="contacts.html">Contacts</a>
+          <a href="FAQ.html">FAQ</a>
+          <img class="logo2" src="pictures/logo2.png" alt="">
+        </div>
+      </nav>
+    </header> 
+  <div class="justify-content-center">
+      <h1>Welcome to the contacts page:</h1>
+  </div>
+  <main class="container-fluid row">
+    <section class="col">
+     <h2>Leave details and we will get back to you as soon as possible:</h2>
+        <form action="">
+          <ul>
+              <li>
+                  <label for="">First Name:</label>
+                  <input type="text" id="firstN" required placeholder="Enter you first name please!">
+              </li>
+              <li>
+                  <label for="">Family Name:</label>
+                  <input id="lastN"type="text" required placeholder="Enter you family name please!">
+              </li>
+              <li>
+                  <label for="">Phone number:</label>
+                  <input id="PhoneN" type="tel" pattern="[0-9]{3}-[0-9]{7}" required
+                      placeholder="Enter a valid phone number!" required>
+              </li>
+              <li>
+                  <label for="">Email:</label>
+                  <input id="Emaily" type="email" required placeholder="Enter a valid email!">
+              </li>
+              <li>
+                  <label for="A">Age:</label>
+                  <input type="number" max="120" min="18">
+              </li>
+  
+              <li>
+                  <label for="Cites">Enter your city:</label>
+  
+                  <select id="selectcity" name="Cites">
+                      <option value="none">--</option>
+                      <option value="NewOr">New Orleans</option>
+                      <option value="NewYork">New York</option>
+                      <option value="Chicago">Chicago</option>
+                      <option value="Washington">Washington</option>
+                  </select>
+              </li>
+              <li>
+                  <label for="Birthday">Birth Date:</label>
+                  <input type="date" name="Birthday">
+              </li>
+              <li>
+                  <label for="">Leave a message:</label>
+                  <br>
+                  <br>
+                  <br>
+                  <textarea name="" id="" cols="20" rows="5"></textarea>
+              </li>
+              <li>
+                <input type="button" value="Send Form" id="theClick">
+              </li>
+              <li>
+                  <input id="Reset" type="reset" value="Reset Form"></input>
+              </li>
+          </ul>
+      </form>
+    </section>
+    <section class="col">
+        <h2>
+            For press inquiries, please contact the email below: 
+        </h2>
+        <h3>press@mardigrasneworleans.com</h3>
+        <h4>Your location is:</h4>   
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="250" height="250" id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d221064.77911278035!2d-89.74247567335935!3d30.032922244342288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8620a454b2118265%3A0xdb065be85e22d3b4!2z16DXmdeVINeQ15XXqNec15nXoNehLCDXnNeV15DXmdeW15nXkNeg15QsINeQ16jXpteV16og15TXkdeo15nXqg!5e0!3m2!1siw!2sil!4v1631141347531!5m2!1siw!2sil"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+    </section>
+</main>
+  <footer>
+    <h2>Follow us on social media:</h2>
+    <div> 
+        <a href="https://www.facebook.com/MardiGrasNewOrleans" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/MardiGrasNOLA" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://www.youtube.com/channel/UChZHgff3JONyxB76wdhGkCA" target="_blank"
+            class="fa fa-youtube"></a>
+        <a href="https://www.instagram.com/mardigrasneworleans/" target="_blank" class="fa fa-instagram"></a>
+    </div>
+    <p>All rights are reserved to © their respective owners  </p>
+    <p>This site was created by Mony Baruh</p>
+   </footer> 
+</div>
+<script>
+    document.getElementById("theClick").addEventListener('click', cheack);
+    let uname = document.querySelector("#firstN");
+    function cheack () {
+
+        let ulast = document.querySelector("#lastN");
+        let uemail = document.querySelector("#Emaily");
+        let uphone = document.querySelector("#PhoneN");
+        
+
+        if (uname.value == "") {
+            alert("Enter First Name please!");
+            
+        }
+        if (ulast.value == "") {
+            alert("Enter Last Name please!");
+            
+        }
+        
+        if (uemail.value == "" || uemail.value.indexOf('@') == -1 || uemail.value.indexOf('.') == -1) {
+            alert("Enter correct Email please!");
+        }
+
+        if (uphone.value == ""){
+
+            alert("Enter a valid Phone number please!");
+        }
+
+
+    }
+</script>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</body>
+</html>
